@@ -6,9 +6,18 @@ function App() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
 
+  const searchLocation = (event) => {
+    if(event.key === 'Enter') {
+    axios.get(url).then((response) => {
+      setData(response.data)
+    })
+  }
+  }
+
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&lat={lat}&lon={lon}&appid=150a49263a5b1ff973b07348fc7e8bda`
   return (
     <div className="app">
+      
       <div className='container'>
         <div className='top'>
           <div className='location'>
