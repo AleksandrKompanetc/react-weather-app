@@ -11,6 +11,7 @@ function App() {
     axios.get(url).then((response) => {
       setData(response.data)
     })
+    setLocation('')
   }
   }
 
