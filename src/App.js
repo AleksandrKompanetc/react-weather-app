@@ -32,16 +32,16 @@ function App() {
             <p>{data.name}</p>
           </div>
           <div className='temp'>
-            {data.main ? <h1>{data.main.temp}</h1> : null}
-            <h1>{data.main.temp}°C</h1>
+            {data.main ? <h1>{data.main.temp} °F</h1> : null}
           </div>
           <div className='description'>
-            <p>Clouds</p>
+            {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
         <div className='bottom'>
           <div className='feels'>
             <p className='bold'>35 °C</p>
+            {data.main ? <p>{data.main.feels_like}</p> : null}
             <p>Feels Like</p>
           </div>
           <div className='humidity'>
