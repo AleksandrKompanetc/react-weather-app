@@ -15,7 +15,7 @@ function App() {
     }
   }
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&lat={lat}&lon={lon}&appid=150a49263a5b1ff973b07348fc7e8bda`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&lat={lat}&lon={lon}&appid=150a49263a5b1ff973b07348fc7e8bda`
   return (
     <div className="app">
       <div className='search'>
@@ -39,7 +39,7 @@ function App() {
           </div>
         </div>
 
-        {data.name != undefined &&
+        {data.name !== undefined &&
           <div className='bottom'>
             <div className='feels'>
               {data.main ? <p className='bold'>{data.main.feels_like} °F</p> : null}
