@@ -40,18 +40,15 @@ function App() {
         </div>
         <div className='bottom'>
           <div className='feels'>
-            <p className='bold'>35 °C</p>
-            {data.main ? <p className='bold'>{data.main.feels_like}</p> : null}
+            {data.main ? <p className='bold'>{data.main.feels_like} °F</p> : null}
             <p>Feels Like</p>
           </div>
           <div className='humidity'>
-            {data.main ? <p>{data.main.humidity}</p> : null}
-            <p className='bold'>20 %</p>
+            {data.main ? <p>{data.main.humidity}%</p> : null}
             <p>Humidity</p>
           </div>
           <div className='wind'>
-            {data.wind ? <p className='bold'>{data.wind.speed}</p> : null}
-            <p className='bold'>12 MPH</p>
+            {data.wind ? <p className='bold'>{data.wind.speed} MPH</p> : null}
             <p>Wind Speed</p>
           </div>
         </div>
